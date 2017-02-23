@@ -1,0 +1,8 @@
+#!/bin/sh
+zip -r -9 dist.zip . \
+  -x '.DS_Store' \
+  -x '.gitlab-ci.yml' \
+  -x '.git/*' \
+  -x 'node_modules/*' \
+  -x 'data/*' \
+  -x 'dist.zip'

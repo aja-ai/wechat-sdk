@@ -1,0 +1,83 @@
+doctype html
+
+head
+  title aja for Wechat
+  meta(charset='utf8')
+  link(rel='stylesheet', href='/assets/main.css')
+  script(src='/assets/main.js')
+
+body
+
+  article.form-container
+    h2 设置
+
+    form(method='post')
+
+      label
+        span aja App Secret
+        input(
+          type='text',
+          name='AJA_APP_SECRET',
+          value=config.AJA_APP_SECRET,
+          autocomplete='off',
+          autocorrect='off',
+          autocapitalize='off',
+          spellcheck='false',
+          required
+        )
+
+      hr
+
+      label
+        span 微信 AppID
+        input(
+          type='text',
+          name='WECHAT_APPID',
+          value=config.WECHAT_APPID,
+          autocomplete='off',
+          autocorrect='off',
+          autocapitalize='off',
+          spellcheck='false',
+          required
+        )
+
+      label
+        span 微信 Token
+        input(
+          type='text',
+          name='WECHAT_TOKEN',
+          value=config.WECHAT_TOKEN,
+          autocomplete='off',
+          autocorrect='off',
+          autocapitalize='off',
+          spellcheck='false',
+          required
+        )
+
+      label
+        span 微信 EncodingAESKey（明文模式留空）
+        input(
+          type='text',
+          name='WECHAT_AESKEY',
+          value=config.WECHAT_AESKEY,
+          autocomplete='off',
+          autocorrect='off',
+          autocapitalize='off'
+          spellcheck='false',
+        )
+
+      hr
+
+      label
+        span 修改密码（不修改留空）
+        input(type='password', name='password', autocomplete='off')
+
+      label
+        span 确认修改密码（不修改留空）
+        input(type='password', name='confirm', autocomplete='off')
+
+      p.err #{err}
+
+      button(type='submit') 保存更改
+
+      p: a(href='/admin/logout') 注销登录

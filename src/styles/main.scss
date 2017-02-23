@@ -1,0 +1,118 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  color: #555;
+}
+
+form {
+
+  label {
+    display: block;
+
+    margin: 20px 0;
+
+    > span {
+      display: block;
+      margin-bottom: 5px;
+
+      font-size: 80%;
+
+      color: #999;
+    }
+
+    > input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  hr {
+    display: block;
+
+    border: none;
+    border-bottom: 2px solid #EEE;
+
+    width: 50px;
+    margin: 50px auto;
+  }
+
+  a, a:visited {
+    color: #999;
+    font-size: 80%;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+input {
+  outline: none;
+
+  border: none;
+  border-bottom: 2px solid #DDD;
+
+  font-size: 140%;
+  font-family: monospace;;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  transition: border 400ms;
+
+  &:hover {
+    border-bottom-color: #999;
+  }
+
+  &:focus {
+    border-bottom-color: #777;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+
+  background: #EEE;
+
+  color: #555;
+  font-size: 80%;
+  font-weight: bold;
+
+  padding: 12px 30px;
+
+  transition: background 400ms, box-shadow 400ms;
+
+  &:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background: #DDD;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.form-container {
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 100px auto;
+
+  form {
+    margin-top: 50px;
+  }
+}
+
+.err {
+  font-size: 80%;
+  color: #D55;
+}
